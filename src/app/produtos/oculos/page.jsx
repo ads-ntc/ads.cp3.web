@@ -1,18 +1,23 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import "../../../components/styles/styles.css"
+
+import OculosImg from "../../assets/oculos.jpg"
+
 export default function Oculos() {
   return (
-    <div>
-      <h1>Tenis</h1>
-      <div>
+    <div className="container-produto">
+      <div className="descricao-produto">
+        <h1>Oculos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus incidunt totam laborum tenetur, aliquam dolor temporibus nesciunt accusamus doloribus nemo quas ratione quos corporis est odio, repellendus reiciendis dignissimos.</p>
-        <p><Link href="/">HOME</Link></p>
+        <p className="valor" >R$: 80,99</p>
+        <button>COMPRAR</button>
+        </div>
         <figure>
-          <Image src="/img/tenis.png" width={400} height={400} alt="Tenis" />
+          <Image src={OculosImg} width={400} height={400} alt="Tenis" />
           <figcaption>Tenis</figcaption>
         </figure>
-      </div>
     </div>
   )
 }

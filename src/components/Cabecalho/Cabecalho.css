@@ -1,0 +1,25 @@
+nav{
+    background-color: #ffffff;
+    height: 50px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:  0 5% 0 5%;
+    
+    
+}
+
+li{
+    padding: 2% 0 0 0;
+    list-style: none;
+   
+}
+
+Link{
+    text-decoration: none;
+    
+}
