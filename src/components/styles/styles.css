@@ -6,6 +6,7 @@
 
 body{
     background-color: #F5F4F3;
+   
 }
 
 
@@ -15,7 +16,7 @@ body{
     align-items: center;
     justify-content: space-around ;
 
-    height: 85vh;
+    height: 100vh;
 }
 
 figcaption{
@@ -27,12 +28,16 @@ figcaption{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around ;
-    height: 85vh;
+    justify-content:center ;
+    height: 50%;
+    flex-wrap: wrap;
+
+    margin: 10% 10% 10% 10%;
 }
 
 .descricao-produto{
-    width: 50%;
+    width: 20%;
+    margin: 0% 0 5% 0;
 }
 
 .valor{
@@ -42,10 +47,17 @@ figcaption{
 }
 
 button{
+    background-color: #680042;
+    color: #ffffff;
+    font-weight: bold;
     width: 180px;
     height: 40px;
 
     margin: 5% 0 0 0;
     border-radius: 10px;
     border: solid 1px;
+}
+
+button:hover{
+    background-color: #6800423e;
 }
