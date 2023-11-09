@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import "../../../components/styles/cadastro.css"
+
 export default function CadUsers({ params }) {
   //Mensage de STATUS!
   const [msg, setMsg] = useState("");
@@ -62,18 +64,18 @@ export default function CadUsers({ params }) {
   };
 
   return (
-    <div>
-      <h1>CADATRO DE USUÁRIOS</h1>
+    <div className="principal-login">
+     
 
       <h2 className={msg == "Cadastro efetuado com Sucesso!!" ? "msg-success-login" : "msg-error-login" }>{msg}</h2>
 
       <div className="form-login">
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>CADASTRO</legend>
-            <div>
+      <h1>CADATRO DE USUÁRIOS</h1>
+        <form className="container-cadastro" onSubmit={handleSubmit}>
+         
+            <div className="cadastro-form">
               <label htmlFor="idNome">Nome:</label>
-              <input
+              <input className="input-cadastro"
                 type="text"
                 name="nome"
                 id="idNome"
@@ -82,9 +84,9 @@ export default function CadUsers({ params }) {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="cadastro-form">
               <label htmlFor="idEmail">Email:</label>
-              <input
+              <input className="input-cadastro"
                 type="email"
                 name="email"
                 id="idEmail"
@@ -93,9 +95,9 @@ export default function CadUsers({ params }) {
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="cadastro-form">
               <label htmlFor="idSenha">Senha:</label>
-              <input
+              <input className="input-cadastro"
                 type="password"
                 name="senha"
                 id="idSenha"
@@ -105,10 +107,10 @@ export default function CadUsers({ params }) {
               />
             </div>
             <div>
-              <button>CADASTRAR</button>
+              <button className="btn-entrar">CADASTRAR</button>
             </div>
             <div className="p-5 m-auto w-2/4">
-              <p>
+              <p className="cadastro-texto">
                 Se você ja é cadastrado em nosso sistema,{" "}
                 <Link
                   href="/login"
@@ -119,7 +121,6 @@ export default function CadUsers({ params }) {
                 para acessar nosso sistema.
               </p>
             </div>
-          </fieldset>
         </form>
       </div>
     </div>

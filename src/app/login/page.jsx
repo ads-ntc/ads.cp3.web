@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import "../../components/styles/login.css"
 
 export default function LoginUsers() {
   //Mensage de STATUS!
@@ -75,45 +76,49 @@ export default function LoginUsers() {
     }
   };
 
+
+
   return (
-    <div>
-      <h1>IDENTIFICAÇÃO DOS USUÁRIOS</h1>
+    <div className="principal-login">
+  
 
         <h2 className={msg == "Login efetuado com Sucesso!!" ? "msg-success-login":"msg-error-login"}>{msg}</h2>
+      <div>
+      
+        <form className="form-login" onSubmit={handleSubmit}>
+         
+            <h1>LOGIN</h1>
+            <div className="container-login">
+                <div className="email">
 
-      <div className="form-login">
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>LOGIN</legend>
-            <div>
-              <label htmlFor="idEmail">Email:</label>
-              <input
-                type="email"
-                name="email"
-                id="idEmail"
-                placeholder="Digite seu email."
-                value={usuario.email}
-                onChange={handleChange}
-              />
+                  <input className="input-login"
+                    type="email"
+                    name="email"
+                    id="idEmail"
+                    placeholder="Digite seu email."
+                    value={usuario.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="senha">
+                  <input className="input-login"
+                    type="password"
+                    name="senha"
+                    id="idSenha"
+                    placeholder="Digite sua senha."
+                    value={usuario.senha}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <button className="btn-entrar">Entrar</button>
+                </div>
+                <div className="p-5 m-auto w-2/4">
+                  <p className="cadastro-texto">Se você não é cadastrado em nosso sistema, <Link href="/login/cad" className="text-amber-500 hover:text-amber-200">CLIQUE AQUI</Link> para se registrar.</p>
+                </div>
             </div>
-            <div>
-              <label htmlFor="idSenha">Senha:</label>
-              <input
-                type="password"
-                name="senha"
-                id="idSenha"
-                placeholder="Digite sua senha."
-                value={usuario.senha}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <button>LOGIN</button>
-            </div>
-            <div className="p-5 m-auto w-2/4">
-              <p>Se você não é cadastrado em nosso sistema, <Link href="/login/cad" className="text-amber-500 hover:text-amber-200">CLIQUE AQUI</Link> para se registrar.</p>
-            </div>
-          </fieldset>
+          
+         
         </form>
       </div>
     </div>
