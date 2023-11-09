@@ -1,6 +1,6 @@
 nav{
     background-color: #680042;
-    height: 50px;
+    height: 8vh;
     
 }
 
@@ -30,3 +30,7 @@ li{
     
 }
 
+.img-login{
+    float: right;
+    margin: 0.2% 2% 0 0;
+}

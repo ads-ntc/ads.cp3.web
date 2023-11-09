@@ -3,6 +3,10 @@
 import Link from 'next/link'
 import './Cabecalho.css'
 
+import Image from 'next/image'
+
+import Login from "../../app/assets/login.png"
+
 
 import { useState } from 'react';
 
@@ -38,7 +42,7 @@ export default function Cabecalho() {
    return (
     <header className='cabecalho'>
         <nav>
-          <Link className='btn-login' href="/login">LOGIN</Link>
+          <Link className='btn-login' href="/login"><Image className='img-login' src={Login} alt="Icone de login em formato de pessoa"/></Link>
         </nav>
     </header>
   ) 
