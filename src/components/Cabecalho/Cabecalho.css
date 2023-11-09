@@ -1,6 +1,12 @@
 nav{
-    background-color: #ffffff;
+    background-color: #680042;
     height: 50px;
+    
+}
+
+.nav{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 ul {
@@ -8,18 +14,19 @@ ul {
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    margin:  0 5% 0 5%;
-    
     
 }
 
 li{
-    padding: 2% 0 0 0;
     list-style: none;
-   
-}
-
-Link{
-    text-decoration: none;
+    padding: 0.5% 0 0 0;
     
 }
+
+.btn-login{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    
+}
+
