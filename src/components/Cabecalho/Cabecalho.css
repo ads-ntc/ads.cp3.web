@@ -1,6 +1,7 @@
 nav{
     background-color: #680042;
-    height: 50px;
+    height: 8vh;
+    
     
 }
 
@@ -27,6 +28,12 @@ li{
     color: #ffffff;
     text-decoration: none;
     font-size: 28px;
-    
+    float: right;
+   
+    padding: 0.5% 2% 0% 0;
 }
 
+.img-login{
+    width: 90%;
+    height: 90%;
+}
